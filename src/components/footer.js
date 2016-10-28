@@ -29,4 +29,10 @@ const Footer = ({ todos, actions, filter }) => (
   </div>
 );
 
+Footer.propTypes = {
+  todos: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired,
+  filter: PropTypes.string.isRequired
+};
+
 export default Footer;

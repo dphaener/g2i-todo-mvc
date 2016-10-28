@@ -38,7 +38,7 @@ export const App = ({ todos, actions, todoFilter }) => {
 
 App.propTypes = {
   todos: PropTypes.array.isRequired,
-  todoFilter: PropTypes.string.isRequired,
+  todoFilter: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired
 };
 

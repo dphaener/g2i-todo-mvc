@@ -8,7 +8,13 @@ import { defaultState } from './reducers/todos';
 
 describe('<App />', () => {
   it('renders without crashing', () => {
-    const wrapper = shallow(<App actions={actions} todos={defaultState.toJS()} />);
+    const wrapper = shallow(
+      <App
+        actions={actions}
+        todos={defaultState.toJS()}
+        todoFilter={{ filter: 'all' }}
+      />
+    );
     expect(wrapper.find('div')).to.have.length(1);
   });
 });
