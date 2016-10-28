@@ -6,8 +6,8 @@ import classnames from 'classnames';
 import './Footer.css';
 
 const Footer = ({ todos, actions, filter }) => (
-  <div>
-    <span>{ todos.filter(todo => !todo.completed).length } items remaining</span>
+  <div className="footer">
+    <span className="remaining">{ todos.filter(todo => !todo.completed).length } items remaining</span>
     <button
       className={classnames({ activeFilter: filter === 'all' })}
       onClick={() => actions.setFilter('all')}

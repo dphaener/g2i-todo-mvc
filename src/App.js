@@ -28,7 +28,7 @@ export const App = ({ todos, actions, todoFilter }) => {
   const filteredTodos = filterTodos(todoFilter.filter, todos);
 
   return (
-    <div>
+    <div className="App">
       <NewTodo addTodo={actions.addTodo} />
       <TodoList todos={filteredTodos} actions={actions} />
       <Footer todos={filteredTodos} actions={actions} filter={todoFilter.filter} />

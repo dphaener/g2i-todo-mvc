@@ -6,14 +6,14 @@ import classnames from 'classnames';
 import './Todo.css';
 
 const Todo = ({ todo, actions }) =>
-  <div className={classnames({ complete: todo.completed })}>
+  <div className={classnames({ complete: todo.completed, todo: true })}>
     <input
       type="checkbox"
       checked={todo.completed}
       onChange={() => actions.toggleTodo(todo)}
     />
-    { todo.value }
-    <button onClick={() => actions.removeTodo(todo)}>Remove</button>
+    <span className="label">{ todo.value }</span>
+    <button className="red" onClick={() => actions.removeTodo(todo)}>X</button>
   </div>
 
 Todo.propTypes = {
