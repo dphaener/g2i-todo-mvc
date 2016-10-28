@@ -16,7 +16,9 @@ export default (keys, actions) => {
         };
       }
     }, dispatch => {
-      return bindActionCreators({ ...actions }, dispatch);
+      return {
+        actions: bindActionCreators({ ...actions }, dispatch)
+      }
     })(component);
   };
 }

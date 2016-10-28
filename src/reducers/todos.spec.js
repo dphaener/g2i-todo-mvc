@@ -23,16 +23,16 @@ describe('todos reducer', () => {
   context('ADD_TODO', () => {
     it('adds a new todo to the list', () => {
       const expectedNew = {
-        id: 1,
+        id: 3,
         value: 'Test the reducers',
         completed: false
       };
       const action = {
         type: 'ADD_TODO',
-        todo: 'Test the reducers'
+        todo: { todo: 'Test the reducers' }
       };
-      const result = todos(defaultState, action).toJS();
-      expect(result[1]).to.eql(expectedNew);
+      const result = todos(allTodos, action).toJS();
+      expect(result[3]).to.eql(expectedNew);
     });
   });
 
@@ -51,10 +51,10 @@ describe('todos reducer', () => {
     });
   });
 
-  context('COMPLETE_TODO', () => {
+  context('TOGGLE_TODO', () => {
     it('completes the todo', () => {
       const action = {
-        type: 'COMPLETE_TODO',
+        type: 'TOGGLE_TODO',
         todo: { id: 0 }
       };
       const result = todos(defaultState, action).toJS();

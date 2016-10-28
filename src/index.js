@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 // Local
 import App from './App';
-import reducer './reducers';
+import reducer from './reducers';
 
 // Styles
 import './index.css';
